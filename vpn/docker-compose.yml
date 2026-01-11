@@ -12,6 +12,7 @@ services:
       wg:
         ipv4_address: 10.42.42.42
         ipv6_address: fdcc:ad94:bacf:61a3::2a
+      proxy:
     volumes:
       - ./wireguard-data:/etc/wireguard
       - /lib/modules:/lib/modules:ro
@@ -29,8 +30,6 @@ services:
       - net.ipv6.conf.all.disable_ipv6=0
       - net.ipv6.conf.all.forwarding=1
       - net.ipv6.conf.default.forwarding=1
-    networks:
-      - proxy
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.wg-easy.rule=Host(`wg-easy.minersonline.uk`)"

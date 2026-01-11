@@ -1,11 +1,12 @@
 services:
   proxy:
     image: itzg/mc-proxy
+    env_file: velocity.env
     environment:
       TYPE: VELOCITY
-      CFG_MOTD: Miners Online
       REPLACE_ENV_VARIABLES: "true"
       ICON: https://github.com/miners-online/.github/blob/main/profile/logos/favicon-64x64.png?raw=true
+      CFG_FORWARDING_SECRET: ${FORWARDING_SECRET}
     ports:
       - "25565:25577"
       - "19132:19132/udp"

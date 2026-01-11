@@ -1,0 +1,26 @@
+services:
+  nginx:
+    image: lscr.io/linuxserver/nginx:latest
+    container_name: nginx
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - php
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - NGINX_AUTORELOAD= #optional
+      - NGINX_AUTORELOAD_WATCHLIST= #optional
+    volumes:
+      - ./config:/config
+      - ./html:/usr/share/nginx/html
+    restart: unless-stopped
+
+  php:
+    image: php:8.2-fpm
+    container_name: php
+    volumes:
+      - ./html:/usr/share/nginx/html
+    restart: unless-stopped

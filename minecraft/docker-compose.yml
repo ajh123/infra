@@ -10,5 +10,5 @@ services:
       - "25565:25577"
       - "19132:19132/udp"
     volumes:
-      - ./config.yml:/config/config.yml
+      - ./config:/config/
     restart: unless-stopped

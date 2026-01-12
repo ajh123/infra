@@ -5,6 +5,7 @@ services:
     environment:
       TYPE: VELOCITY
       REPLACE_ENV_VARIABLES: "true"
+      REMOVE_OLD_PLUGINS: "true"
       PLUGINS_FILE: /config/plugins.txt
       ICON: https://github.com/miners-online/.github/blob/main/profile/logos/favicon-64x64.png?raw=true
     ports:

@@ -1,0 +1,6 @@
+https://hangarcdn.papermc.io/plugins/ViaVersion/ViaVersion/versions/4.10.2/PAPER/ViaVersion-4.10.2.jar
+https://hangarcdn.papermc.io/plugins/ViaVersion/ViaBackwards/versions/4.10.2/PAPER/ViaBackwards-4.10.2.jar
+https://hangarcdn.papermc.io/plugins/ViaVersion/ViaRewind/versions/4.0.13/PAPER/ViaRewind-4.0.13.jar
+https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/velocity
+https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/velocity
+https://hangarcdn.papermc.io/plugins/turikhay/MapModCompanion/versions/0.10.0/PAPER/MapModCompanion.jar

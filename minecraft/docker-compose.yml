@@ -9,6 +9,10 @@ services:
     env_file: rabbitmq.env
     networks:
       - minecraft
+    resources:
+      limits:
+        cpus: '0.5'
+        memory: 1G
 
   proxy:
     image: itzg/mc-proxy:java25
@@ -27,6 +31,10 @@ services:
     restart: unless-stopped
     networks:
       - minecraft
+    resources:
+      limits:
+        cpus: '1'
+        memory: 3G
 
   lobby:
     image: ghcr.io/miners-online/game-lobby:latest
@@ -40,6 +48,10 @@ services:
     restart: unless-stopped
     networks:
       - minecraft
+    resources:
+      limits:
+        cpus: '1'
+        memory: 3G
 
 networks:
   minecraft:

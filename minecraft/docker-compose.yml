@@ -1,20 +1,4 @@
 services:
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq
-    restart: unless-stopped
-    ports:
-      - 5672:5672
-      - 15672:15672
-    env_file: rabbitmq.env
-    networks:
-      - minecraft
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: 1G
-
   proxy:
     image: itzg/mc-proxy:java25
     env_file: velocity.env
@@ -30,8 +14,6 @@ services:
     volumes:
       - ./config:/config/
     restart: unless-stopped
-    depends_on:
-      - rabbitmq
     networks:
       - minecraft
     deploy:
@@ -51,7 +33,6 @@ services:
       - ./lobby.properties:/config/server.properties
     restart: unless-stopped
     depends_on:
-      - rabbitmq
       - proxy
     networks:
       - minecraft

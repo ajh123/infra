@@ -12,3 +12,8 @@ services:
       - "5080:5080/tcp"
       - "8021:8021/tcp"
       - "16384-32768:16384-32768/udp"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 3G

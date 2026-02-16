@@ -1,7 +1,5 @@
 FROM debian:buster
 
-RUN sed -i 's/http:\/\/deb.debian.org/http:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list
-
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yq install git
 
 #RUN git clone https://github.com/signalwire/freeswitch /usr/src/freeswitch

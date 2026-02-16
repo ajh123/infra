@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bookworm-slim
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -yq install git
 

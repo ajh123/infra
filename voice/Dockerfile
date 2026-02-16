@@ -27,7 +27,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install \
 # mod_python3
     python3-dev \
 # mod_av
-    libavformat-dev libswscale-dev libavresample-dev \
+    libavformat-dev libswscale-dev libswresample-dev \
 # mod_lua
     liblua5.2-dev \
 # mod_opus

@@ -1,7 +1,7 @@
 services:
   proxy:
     image: itzg/mc-proxy:java25
-    env_file: velocity.env
+    env_file: config.env
     environment:
       TYPE: VELOCITY
       REPLACE_ENV_VARIABLES: "true"
@@ -25,7 +25,7 @@ services:
   lobby:
     image: ghcr.io/miners-online/game-lobby:latest
     container_name: lobby-1
-    env_file: lobby.env
+    env_file: config.env
     environment:
       CONFIG_PATH: /config/server.properties
     volumes:

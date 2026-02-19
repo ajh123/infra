@@ -4,4 +4,4 @@ https://cdn.modrinth.com/data/TbHIxhx5/versions/ezTzjlZT/ViaRewind-4.0.14-SNAPSH
 https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/velocity
 https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/velocity
 https://hangarcdn.papermc.io/plugins/turikhay/MapModCompanion/versions/0.10.0/PAPER/MapModCompanion.jar
-https://download.luckperms.net/1612/velocity/LuckPerms-Velocity-5.5.24.jar
+https://download.luckperms.net/1622/velocity/LuckPerms-Velocity-5.5.34.jar

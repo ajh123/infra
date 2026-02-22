@@ -8,7 +8,7 @@ services:
     networks:
       - proxy
     env_file: ./traefik.env
-    entrypoint: ["/entrypoint.sh"]
+    command: ["--configFile=/etc/traefik/traefik.yaml"]
     ports:
       - "80:80"
       - "8080:8080"
@@ -16,7 +16,7 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./letsencrypt:/letsencrypt"
-      - "./entrypoint.sh:/entrypoint.sh:ro"
+      - "./traefik.yaml:/etc/traefik/traefik.yaml:ro"
 
 networks:
   proxy:

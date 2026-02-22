@@ -1,0 +1,29 @@
+api:
+  insecure: false
+  dashboard: true
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: proxy
+
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+  websecure:
+    address: ":443"
+    http:
+      tls: {}
+
+certificatesResolvers:
+  cf:
+    acme:
+      email: "${CF_API_EMAIL}"
+      storage: /letsencrypt/acme.json
+      dnsChallenge:
+        provider: cloudflare
